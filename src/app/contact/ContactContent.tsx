@@ -19,8 +19,10 @@ export default function ContactContent() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    const whatsappMessage = encodeURIComponent(
+      `Hi! I have an inquiry.\n\nName: ${formData.name}\nEmail: ${formData.email || 'N/A'}\nSubject: ${formData.subject || 'N/A'}\n\nMessage: ${formData.message}`
+    );
+    window.open(`https://wa.me/${CONTACT_INFO.whatsapp}?text=${whatsappMessage}`, "_blank");
   };
 
   const inputClasses =
@@ -181,10 +183,18 @@ export default function ContactContent() {
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       />
                     </div>
-                    <Button type="submit" variant="primary" size="lg" className="w-full">
-                      <Send className="w-4 h-4" />
-                      Send Message
-                    </Button>
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        className="w-full inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
+                      >
+                        <Send className="w-5 h-5" />
+                        Message via WhatsApp
+                      </button>
+                      <p className="text-center text-xs text-charcoal-light dark:text-dark-text-muted mt-3">
+                        You will be redirected to WhatsApp to send your message.
+                      </p>
+                    </div>
                   </form>
                 )}
               </div>

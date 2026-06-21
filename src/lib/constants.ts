@@ -514,47 +514,32 @@ export const PORTFOLIO_CATEGORIES = [
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   // Mehndi
-  { id: "p1", title: "Royal Bridal Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
-  { id: "p2", title: "Engagement Special", category: "mehndi", image: "/images/engagement-mehndi.png" },
-  { id: "p3", title: "Festival Celebration", category: "mehndi", image: "/images/festival-mehndi.png" },
-  { id: "p4", title: "Traditional Patterns", category: "mehndi", image: "/images/hero-banner.png" },
-  { id: "p15", title: "Arabic Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
+  { id: "m1", title: "Royal Bridal Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
+  { id: "m2", title: "Minimalist Engagement Henna", category: "mehndi", image: "/images/engagement-mehndi.png" },
+  { id: "m3", title: "Festive Diwali Mehndi", category: "mehndi", image: "/images/festival-mehndi.png" },
 
   // Paintings
-  { id: "p17", title: "Abstract Canvas Art", category: "paintings", image: "/images/canvas-painting.png" },
-  { id: "p18", title: "Landscape Painting", category: "paintings", image: "/images/canvas-painting.png" },
-  { id: "p19", title: "Vibrant Acrylics", category: "paintings", image: "/images/canvas-painting.png" },
-  { id: "p20", title: "Floral Canvas Art", category: "paintings", image: "/images/canvas-painting.png" },
+  { id: "p1", title: "Abstract Canvas Splashes", category: "paintings", image: "/images/canvas-painting.png" },
+  { id: "p2", title: "Modern Digital Mandala", category: "paintings", image: "/images/digital-artwork.png" },
 
   // Sketches
-  { id: "p21", title: "Pencil Portrait", category: "sketches", image: "/images/portrait-sketch.png" },
-  { id: "p22", title: "Charcoal Study", category: "sketches", image: "/images/charcoal-sketch.png" },
-  { id: "p23", title: "Figure Drawing", category: "sketches", image: "/images/portrait-sketch.png" },
-  { id: "p24", title: "Pet Portrait Sketch", category: "sketches", image: "/images/charcoal-sketch.png" },
+  { id: "s1", title: "Hyper-realistic Pencil Portrait", category: "sketches", image: "/images/portrait-sketch.png" },
+  { id: "s2", title: "Dramatic Charcoal Dancer", category: "sketches", image: "/images/charcoal-sketch.png" },
 
   // Dresses
-  { id: "p5", title: "Designer Lehenga", category: "dresses", image: "/images/portfolio-dress.png" },
-  { id: "p6", title: "Embroidered Suit", category: "dresses", image: "/images/dress-designing.png" },
-  { id: "p7", title: "Fusion Wear", category: "dresses", image: "/images/portfolio-dress.png" },
-  { id: "p8", title: "Bridal Outfit", category: "dresses", image: "/images/dress-designing.png" },
-  { id: "p16", title: "Custom Anarkali", category: "dresses", image: "/images/portfolio-dress.png" },
+  { id: "d1", title: "Deep Burgundy Fusion Lehenga", category: "dresses", image: "/images/dress-designing.png" },
+  { id: "d2", title: "Modern Bridal Anarkali", category: "dresses", image: "/images/portfolio-dress.png" },
 
   // Crafts
-  { id: "p9", title: "Handpainted Art", category: "crafts", image: "/images/handmade-crafts.png" },
-  { id: "p10", title: "Wall Craft Piece", category: "crafts", image: "/images/handmade-crafts.png" },
-  { id: "p11", title: "Custom Craft Creation", category: "crafts", image: "/images/custom-gifts.png" },
+  { id: "c1", title: "Mixed Media Resin Art", category: "crafts", image: "/images/handmade-crafts.png" },
 
   // Gifts
-  { id: "p12", title: "Wedding Gift Hamper", category: "gifts", image: "/images/custom-gifts.png" },
-  { id: "p13", title: "Birthday Special", category: "gifts", image: "/images/custom-gifts.png" },
-  { id: "p14", title: "Corporate Gifts", category: "gifts", image: "/images/handmade-crafts.png" },
+  { id: "g1", title: "Luxury Bespoke Gift Hamper", category: "gifts", image: "/images/custom-gifts.png" },
 
   // Home Decor
-  { id: "p25", title: "Artistic Wall Hanging", category: "home-decor", image: "/images/wall-decor.png" },
-  { id: "p26", title: "Decorative Frame Set", category: "home-decor", image: "/images/wall-decor.png" },
-  { id: "p27", title: "Festival Decoration", category: "home-decor", image: "/images/festival-decoration.png" },
-  { id: "p28", title: "Handmade Table Decor", category: "home-decor", image: "/images/home-decor.png" },
-  { id: "p29", title: "Interior Accent Piece", category: "home-decor", image: "/images/home-decor.png" },
+  { id: "h1", title: "Handcrafted Artisanal Vases", category: "home-decor", image: "/images/home-decor.png" },
+  { id: "h2", title: "Metallic Macrame Wall Art", category: "home-decor", image: "/images/wall-decor.png" },
+  { id: "h3", title: "Festive Diwali Setup", category: "home-decor", image: "/images/festival-decoration.png" },
 ];
 
 // ===== TESTIMONIALS =====

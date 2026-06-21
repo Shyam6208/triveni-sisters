@@ -20,14 +20,12 @@ export default function BookingContent() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // In production, this would submit to a backend
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    const whatsappMessage = encodeURIComponent(
+      `Hi! I'd like to book a consultation.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email || 'N/A'}\nService: ${formData.service}\nEvent Date: ${formData.eventDate || 'N/A'}\nBudget: ${formData.budget || 'N/A'}\n\nMessage: ${formData.message || 'N/A'}`
+    );
+    window.open(`https://wa.me/${CONTACT_INFO.whatsapp}?text=${whatsappMessage}`, "_blank");
   };
 
-  const whatsappMessage = encodeURIComponent(
-    `Hi! I'd like to book a consultation.\n\nName: ${formData.name}\nService: ${formData.service}\nEvent Date: ${formData.eventDate}\nBudget: ${formData.budget}\n\n${formData.message}`
-  );
 
   const inputClasses =
     "w-full px-4 py-3 bg-[var(--surface)] dark:bg-dark-surface-2 border border-[var(--border)] rounded-xl text-charcoal dark:text-dark-text placeholder:text-charcoal-light/50 dark:placeholder:text-dark-text-muted/50 focus:outline-none focus:border-burgundy dark:focus:border-antique-gold focus:ring-2 focus:ring-burgundy/10 dark:focus:ring-antique-gold/10 transition-all duration-300 font-body text-sm";
@@ -99,7 +97,7 @@ export default function BookingContent() {
                           type="tel"
                           id="phone"
                           required
-                          placeholder="+91 XXXXXXXXXX"
+                          placeholder="+91 99538 89028"
                           className={inputClasses}
                           value={formData.phone}
                           onChange={(e) =>
@@ -204,20 +202,17 @@ export default function BookingContent() {
                       />
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button type="submit" variant="primary" size="lg" className="flex-1">
-                        <Send className="w-4 h-4" />
-                        Send Inquiry
-                      </Button>
-                      <a
-                        href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${whatsappMessage}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-lg"
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        className="w-full inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
                       >
-                        <MessageCircle className="w-5 h-5" />
+                        <MessageCircle className="w-6 h-6" />
                         Book via WhatsApp
-                      </a>
+                      </button>
+                      <p className="text-center text-xs text-charcoal-light dark:text-dark-text-muted mt-3">
+                        You will be redirected to WhatsApp to complete your booking.
+                      </p>
                     </div>
                   </form>
                 )}
