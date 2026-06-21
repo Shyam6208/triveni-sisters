@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from "@/components/ui/SocialIcons";
-import { CONTACT_INFO, SERVICES } from "@/lib/constants";
+import { CONTACT_INFO, SERVICE_CATEGORIES } from "@/lib/constants";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function Footer() {
@@ -33,8 +33,8 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-5">
-                Where Art, Tradition & Creativity Come Together. Premium Mehndi, Handmade Crafts &
-                Dress Designing by Three Sisters.
+                Where Art, Tradition & Creativity Come Together. Premium Mehndi, Paintings, Sketches,
+                Fashion, Crafts, Gifts & Home Decor by Three Sisters.
               </p>
               <div className="flex gap-3">
                 {[
@@ -84,18 +84,18 @@ export default function Footer() {
             </div>
           </AnimatedSection>
 
-          {/* Services */}
+          {/* Service Categories */}
           <AnimatedSection variant="fadeUp" delay={0.2}>
             <div>
-              <h3 className="font-heading text-lg font-bold mb-5 text-antique-gold">Services</h3>
+              <h3 className="font-heading text-lg font-bold mb-5 text-antique-gold">Our Services</h3>
               <ul className="space-y-3">
-                {SERVICES.slice(0, 6).map((service) => (
-                  <li key={service.id}>
+                {SERVICE_CATEGORIES.map((cat) => (
+                  <li key={cat.id}>
                     <Link
-                      href="/services"
+                      href={`/services#${cat.id}`}
                       className="text-white/60 hover:text-antique-gold transition-colors text-sm"
                     >
-                      {service.title}
+                      {cat.title}
                     </Link>
                   </li>
                 ))}

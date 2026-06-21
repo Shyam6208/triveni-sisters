@@ -5,7 +5,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = generatePageMetadata({
   title: "About Us",
   description:
-    "Discover the story of Triveni Art House — three sisters united by their passion for art, mehndi, fashion, and handcrafted creations.",
+    "Discover the story of Triveni Art House — three sisters united by their passion for art, mehndi, paintings, sketches, fashion, handcrafted gifts, and home decoration.",
   path: "/about",
   image: "/images/about-sisters.png",
 });

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://triveniarthhouse.com";
 const SITE_NAME = "Triveni Art House";
 const DEFAULT_DESCRIPTION =
-  "Premium Mehndi, Handmade Crafts, Dress Designing & Creative Gifts by Three Sisters. Where Art, Tradition & Creativity Come Together.";
+  "Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio Where Art, Tradition & Creativity Come Together.";
 
 export function generatePageMetadata({
   title,
@@ -24,12 +24,25 @@ export function generatePageMetadata({
     title: fullTitle,
     description: desc,
     keywords: [
-      "mehndi design",
+      "mehndi artist",
       "bridal mehndi",
       "henna artist",
+      "painting artist",
+      "portrait sketch artist",
+      "canvas painting",
+      "acrylic painting",
+      "charcoal sketch",
+      "pencil sketch",
+      "digital artwork",
+      "art and craft",
       "handmade gifts",
       "dress designing",
-      "art and craft",
+      "custom artwork",
+      "home decoration",
+      "handmade home decor",
+      "wall decor",
+      "festival decorations",
+      "creative studio",
       "custom orders",
       "Indian wedding",
       "Triveni Art House",
@@ -73,7 +86,7 @@ export function generateSchemaMarkup() {
     name: SITE_NAME,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
-    telephone: "+91XXXXXXXXXX",
+    telephone: "+919953889028",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",

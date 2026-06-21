@@ -22,18 +22,23 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Triveni Art House | Premium Mehndi, Handmade Crafts & Dress Designing",
+  title: "Triveni Art House | Premium Mehndi, Paintings, Sketches, Fashion & Home Decor",
   description:
-    "Where Art, Tradition & Creativity Come Together. Premium Mehndi, Handmade Crafts, Dress Designing & Creative Gifts by Three Sisters. Book your consultation today.",
+    "Where Art, Tradition & Creativity Come Together. Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. Book your consultation today.",
   keywords: [
-    "mehndi design",
+    "mehndi artist",
     "bridal mehndi",
     "henna artist",
+    "painting artist",
+    "portrait sketch artist",
+    "canvas painting",
+    "charcoal sketch",
+    "art and craft",
     "handmade gifts",
     "dress designing",
-    "art and craft",
-    "custom orders",
-    "Indian wedding",
+    "home decoration",
+    "creative studio",
+    "custom artwork",
     "Triveni Art House",
   ],
   authors: [{ name: "Triveni Art House" }],
@@ -42,16 +47,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://triveniarthhouse.com",
-    title: "Triveni Art House | Premium Mehndi, Handmade Crafts & Dress Designing",
+    title: "Triveni Art House | Premium Mehndi, Paintings, Sketches, Fashion & Home Decor",
     description:
-      "Where Art, Tradition & Creativity Come Together. Premium Mehndi, Handmade Crafts, Dress Designing & Creative Gifts by Three Sisters.",
+      "Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio.",
     siteName: "Triveni Art House",
     images: [
       {
         url: "/images/hero-banner.png",
         width: 1200,
         height: 630,
-        alt: "Triveni Art House",
+        alt: "Triveni Art House — Premium Creative Studio",
       },
     ],
   },
@@ -59,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Triveni Art House",
     description:
-      "Premium Mehndi, Handmade Crafts, Dress Designing & Creative Gifts by Three Sisters.",
+      "Premium Mehndi, Paintings, Sketches, Fashion, Crafts, Gifts & Home Decor by Three Sisters.",
     images: ["/images/hero-banner.png"],
   },
 };

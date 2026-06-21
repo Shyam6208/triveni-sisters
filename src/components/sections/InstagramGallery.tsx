@@ -7,11 +7,13 @@ import { InstagramIcon } from "@/components/ui/SocialIcons";
 
 const INSTAGRAM_IMAGES = [
   { id: "ig1", src: "/images/bridal-mehndi.png", alt: "Bridal mehndi design" },
-  { id: "ig2", src: "/images/handmade-crafts.png", alt: "Handmade crafts" },
+  { id: "ig2", src: "/images/canvas-painting.png", alt: "Canvas painting" },
   { id: "ig3", src: "/images/dress-designing.png", alt: "Dress designing" },
-  { id: "ig4", src: "/images/custom-gifts.png", alt: "Custom gifts" },
-  { id: "ig5", src: "/images/engagement-mehndi.png", alt: "Engagement mehndi" },
-  { id: "ig6", src: "/images/festival-mehndi.png", alt: "Festival mehndi" },
+  { id: "ig4", src: "/images/home-decor.png", alt: "Handmade home decor" },
+  { id: "ig5", src: "/images/portrait-sketch.png", alt: "Portrait sketch" },
+  { id: "ig6", src: "/images/custom-gifts.png", alt: "Custom gifts" },
+  { id: "ig7", src: "/images/wall-decor.png", alt: "Wall decor" },
+  { id: "ig8", src: "/images/festival-mehndi.png", alt: "Festival mehndi" },
 ];
 
 export default function InstagramGallery() {
@@ -23,9 +25,9 @@ export default function InstagramGallery() {
           subtitle="Stay inspired — follow us on Instagram for daily creative updates"
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4">
           {INSTAGRAM_IMAGES.map((img, i) => (
-            <AnimatedSection key={img.id} delay={i * 0.08} variant="scale">
+            <AnimatedSection key={img.id} delay={i * 0.06} variant="scale">
               <a
                 href="https://instagram.com/triveniarthhouse"
                 target="_blank"
@@ -37,7 +39,7 @@ export default function InstagramGallery() {
                   alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
                 />
                 <div className="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <InstagramIcon className="w-8 h-8 text-white" />

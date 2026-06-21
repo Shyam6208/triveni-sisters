@@ -1,18 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import Button from "@/components/ui/Button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+const SERVICE_WORDS = [
+  "Mehndi",
+  "Paintings",
+  "Sketches",
+  "Fashion",
+  "Crafts",
+  "Home Decor",
+];
+
 export default function HeroSection() {
+  const [currentWord, setCurrentWord] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWord((prev) => (prev + 1) % SERVICE_WORDS.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" id="hero-section">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero-banner.png"
-          alt="Triveni Art House - Mehndi, Crafts & Creative Designs"
+          alt="Triveni Art House - Premium Creative Studio"
           fill
           className="object-cover"
           priority
@@ -32,6 +51,11 @@ export default function HeroSection() {
         className="absolute bottom-40 right-40 w-20 h-20 rounded-full border border-rose-gold/15 hidden lg:block"
         animate={{ rotate: -360 }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+      />
+      <motion.div
+        className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-antique-gold/40 hidden lg:block"
+        animate={{ y: [0, -20, 0], opacity: [0.4, 1, 0.4] }}
+        transition={{ duration: 3, repeat: Infinity }}
       />
 
       {/* Content */}
@@ -59,15 +83,35 @@ export default function HeroSection() {
             <span className="text-antique-gold">Creativity</span> Come Together
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Animated subtitle with rotating words */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed font-body"
+            className="mb-10"
           >
-            Premium Mehndi, Handmade Crafts, Dress Designing & Creative Gifts by Three Sisters
-          </motion.p>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed font-body">
+              Premium{" "}
+              <span className="relative inline-block min-w-[120px] text-antique-gold font-semibold">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentWord}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="inline-block"
+                  >
+                    {SERVICE_WORDS[currentWord]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              {" "}by Three Sisters
+            </p>
+            <p className="text-sm md:text-base text-white/50 mt-2 font-body tracking-wide">
+              Mehndi · Paintings · Sketches · Fashion · Crafts · Gifts · Home Decor
+            </p>
+          </motion.div>
 
           {/* CTAs */}
           <motion.div

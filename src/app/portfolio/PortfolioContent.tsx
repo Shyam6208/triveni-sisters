@@ -25,6 +25,15 @@ export default function PortfolioContent() {
     [activeCategory]
   );
 
+  // Count items per category
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { all: PORTFOLIO_ITEMS.length };
+    PORTFOLIO_ITEMS.forEach((item) => {
+      counts[item.category] = (counts[item.category] || 0) + 1;
+    });
+    return counts;
+  }, []);
+
   const handleItemClick = useCallback(
     (item: PortfolioItemType) => {
       const index = filteredItems.findIndex((i) => i.id === item.id);
@@ -56,7 +65,7 @@ export default function PortfolioContent() {
               Our Portfolio
             </h1>
             <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              A curated collection of our finest work — each piece crafted with passion and precision.
+              A curated collection of our finest work — mehndi, paintings, sketches, fashion, crafts, gifts, and home decor, each crafted with passion and precision.
             </p>
           </AnimatedSection>
         </div>
@@ -72,7 +81,7 @@ export default function PortfolioContent() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer flex items-center gap-2 ${
                   activeCategory === cat.id
                     ? "bg-burgundy text-white shadow-lg shadow-burgundy/20 dark:bg-antique-gold dark:text-dark-bg"
                     : "bg-[var(--surface)] text-charcoal-light dark:bg-dark-surface dark:text-dark-text-muted border border-[var(--border)] hover:border-burgundy/30 dark:hover:border-antique-gold/30"
@@ -80,15 +89,24 @@ export default function PortfolioContent() {
                 id={`filter-${cat.id}`}
               >
                 {cat.label}
+                <span
+                  className={`text-xs px-1.5 py-0.5 rounded-full ${
+                    activeCategory === cat.id
+                      ? "bg-white/20"
+                      : "bg-burgundy/10 text-burgundy dark:bg-antique-gold/10 dark:text-antique-gold"
+                  }`}
+                >
+                  {categoryCounts[cat.id] || 0}
+                </span>
               </button>
             ))}
           </AnimatedSection>
 
-          {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          {/* Masonry Grid */}
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-5 space-y-4 md:space-y-5">
             <AnimatePresence mode="popLayout">
-              {filteredItems.map((item) => (
-                <PortfolioItem key={item.id} item={item} onClick={handleItemClick} />
+              {filteredItems.map((item, i) => (
+                <PortfolioItem key={item.id} item={item} onClick={handleItemClick} index={i} />
               ))}
             </AnimatePresence>
           </div>

@@ -11,6 +11,11 @@ import {
   Mail,
   MapPin,
   Clock,
+  Brush,
+  PenLine,
+  Frame,
+  Home,
+  Flower2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -25,6 +30,80 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
+// ===== SERVICE CATEGORIES =====
+export interface ServiceCategory {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  serviceIds: string[];
+}
+
+export const SERVICE_CATEGORIES: ServiceCategory[] = [
+  {
+    id: "mehndi-arts",
+    title: "Mehndi Arts",
+    description:
+      "Exquisite henna artistry for weddings, engagements, and festivals — from traditional Indian motifs to contemporary Arabic patterns.",
+    icon: Crown,
+    serviceIds: ["bridal-mehndi", "engagement-mehndi", "festival-mehndi"],
+  },
+  {
+    id: "art-craft",
+    title: "Art & Craft",
+    description:
+      "Unique handcrafted art pieces and creative projects, from mixed media installations to personalized wall art.",
+    icon: Palette,
+    serviceIds: ["custom-art-pieces", "mixed-media-art", "wall-art-frames"],
+  },
+  {
+    id: "paintings-sketches",
+    title: "Paintings & Sketches",
+    description:
+      "Original paintings and hand-drawn sketches — canvas, acrylic, portrait, pencil, charcoal, and digital artwork.",
+    icon: Brush,
+    serviceIds: [
+      "canvas-painting",
+      "acrylic-painting",
+      "portrait-painting",
+      "pencil-sketches",
+      "charcoal-sketches",
+      "digital-artwork",
+    ],
+  },
+  {
+    id: "fashion-stitching",
+    title: "Fashion & Stitching",
+    description:
+      "Bespoke dress designing, tailoring, and alterations — from traditional Indian wear to contemporary fusion styles.",
+    icon: Gem,
+    serviceIds: ["dress-designing", "stitching-services"],
+  },
+  {
+    id: "handmade-gifts",
+    title: "Handmade Gifts",
+    description:
+      "Thoughtful, handcrafted gifts for every occasion — personalized hampers, custom packaging, and corporate gifting.",
+    icon: Gift,
+    serviceIds: ["custom-gift-hampers", "personalized-gifts", "corporate-gifting"],
+  },
+  {
+    id: "home-decor",
+    title: "Home Decor",
+    description:
+      "Artistic home decoration pieces, wall accents, decorative frames, and festival-themed décor crafted by hand.",
+    icon: Home,
+    serviceIds: [
+      "handmade-home-decor",
+      "wall-decor",
+      "decorative-frames",
+      "festival-decorations",
+      "customized-decorative-items",
+      "artistic-interior-decor",
+    ],
+  },
+];
+
 // ===== SERVICES =====
 export interface Service {
   id: string;
@@ -33,9 +112,11 @@ export interface Service {
   features: string[];
   image: string;
   icon: LucideIcon;
+  category: string;
 }
 
 export const SERVICES: Service[] = [
+  // --- Mehndi Arts ---
   {
     id: "bridal-mehndi",
     title: "Bridal Mehndi",
@@ -49,6 +130,7 @@ export const SERVICES: Service[] = [
     ],
     image: "/images/bridal-mehndi.png",
     icon: Crown,
+    category: "mehndi-arts",
   },
   {
     id: "engagement-mehndi",
@@ -63,6 +145,7 @@ export const SERVICES: Service[] = [
     ],
     image: "/images/engagement-mehndi.png",
     icon: Heart,
+    category: "mehndi-arts",
   },
   {
     id: "festival-mehndi",
@@ -77,35 +160,149 @@ export const SERVICES: Service[] = [
     ],
     image: "/images/festival-mehndi.png",
     icon: Sparkles,
+    category: "mehndi-arts",
   },
+
+  // --- Art & Craft ---
   {
-    id: "art-craft",
-    title: "Art & Craft",
+    id: "custom-art-pieces",
+    title: "Custom Art Pieces",
     description:
       "Unique handcrafted art pieces that bring creativity to life. From wall decor to personalized art, each piece is made with love and precision.",
     features: [
-      "Custom art pieces",
+      "Custom art commissions",
       "Wall decor & frames",
       "Mixed media art",
       "Personalized creations",
     ],
     image: "/images/handmade-crafts.png",
     icon: Palette,
+    category: "art-craft",
   },
   {
-    id: "handmade-gifts",
-    title: "Handmade Gifts",
+    id: "mixed-media-art",
+    title: "Mixed Media Art",
     description:
-      "Thoughtful, handcrafted gifts that speak from the heart. Perfect for weddings, birthdays, anniversaries, and every special moment.",
+      "Creative mixed media compositions combining textures, colors, and materials into stunning visual artworks for homes and offices.",
     features: [
-      "Custom gift hampers",
-      "Personalized packaging",
-      "Corporate gifting",
-      "Occasion-specific themes",
+      "Multi-material compositions",
+      "Texture layering",
+      "Modern abstract designs",
+      "Custom sizes available",
     ],
-    image: "/images/custom-gifts.png",
-    icon: Gift,
+    image: "/images/handmade-crafts.png",
+    icon: Palette,
+    category: "art-craft",
   },
+  {
+    id: "wall-art-frames",
+    title: "Wall Art & Frames",
+    description:
+      "Beautiful handcrafted wall art and decorative frames that add character and charm to any space.",
+    features: [
+      "Handcrafted frames",
+      "Artistic wall panels",
+      "Custom sizing",
+      "Premium materials",
+    ],
+    image: "/images/handmade-crafts.png",
+    icon: Frame,
+    category: "art-craft",
+  },
+
+  // --- Paintings & Sketches ---
+  {
+    id: "canvas-painting",
+    title: "Canvas Painting",
+    description:
+      "Original canvas paintings crafted with passion — from serene landscapes to vibrant abstracts, each painting is a unique masterpiece.",
+    features: [
+      "Premium canvas & paints",
+      "Custom sizes available",
+      "Landscapes & abstracts",
+      "Ready-to-hang finish",
+    ],
+    image: "/images/canvas-painting.png",
+    icon: Brush,
+    category: "paintings-sketches",
+  },
+  {
+    id: "acrylic-painting",
+    title: "Acrylic Painting",
+    description:
+      "Vibrant acrylic paintings with rich textures and bold colors. Perfect for modern interiors and art collectors.",
+    features: [
+      "Rich color palettes",
+      "Textured finishes",
+      "Modern & traditional styles",
+      "Gallery-quality work",
+    ],
+    image: "/images/canvas-painting.png",
+    icon: Brush,
+    category: "paintings-sketches",
+  },
+  {
+    id: "portrait-painting",
+    title: "Portrait Painting",
+    description:
+      "Lifelike portrait paintings that capture the essence and personality of your loved ones. A timeless keepsake.",
+    features: [
+      "Realistic likenesses",
+      "Multiple mediums",
+      "From photographs",
+      "Family & pet portraits",
+    ],
+    image: "/images/portrait-sketch.png",
+    icon: PenLine,
+    category: "paintings-sketches",
+  },
+  {
+    id: "pencil-sketches",
+    title: "Pencil Sketches",
+    description:
+      "Detailed pencil sketches with fine shading and realistic proportions. Ideal for portraits, landscapes, and custom illustrations.",
+    features: [
+      "Fine detail work",
+      "Realistic shading",
+      "Portrait & landscape",
+      "Archival-grade paper",
+    ],
+    image: "/images/portrait-sketch.png",
+    icon: PenLine,
+    category: "paintings-sketches",
+  },
+  {
+    id: "charcoal-sketches",
+    title: "Charcoal Sketches",
+    description:
+      "Dramatic charcoal sketches with deep contrasts and expressive strokes. Bold, emotional, and captivating artwork.",
+    features: [
+      "Bold contrast & depth",
+      "Expressive techniques",
+      "Portraits & figures",
+      "Professional framing",
+    ],
+    image: "/images/charcoal-sketch.png",
+    icon: PenLine,
+    category: "paintings-sketches",
+  },
+  {
+    id: "digital-artwork",
+    title: "Digital Artwork",
+    description:
+      "Modern digital illustrations and artwork for prints, social media, branding, and personalized digital gifts.",
+    features: [
+      "High-resolution output",
+      "Print & digital formats",
+      "Custom illustrations",
+      "Quick turnaround",
+    ],
+    image: "/images/digital-artwork.png",
+    icon: Sparkles,
+    category: "paintings-sketches",
+  },
+
+  // --- Fashion & Stitching ---
   {
     id: "dress-designing",
     title: "Dress Designing",
@@ -119,6 +316,7 @@ export const SERVICES: Service[] = [
     ],
     image: "/images/dress-designing.png",
     icon: Gem,
+    category: "fashion-stitching",
   },
   {
     id: "stitching-services",
@@ -133,56 +331,230 @@ export const SERVICES: Service[] = [
     ],
     image: "/images/dress-designing.png",
     icon: Scissors,
+    category: "fashion-stitching",
+  },
+
+  // --- Handmade Gifts ---
+  {
+    id: "custom-gift-hampers",
+    title: "Custom Gift Hampers",
+    description:
+      "Thoughtful, handcrafted gift hampers curated for every occasion — weddings, birthdays, anniversaries, and corporate events.",
+    features: [
+      "Curated gift selection",
+      "Premium packaging",
+      "Occasion-specific themes",
+      "Bulk order discounts",
+    ],
+    image: "/images/custom-gifts.png",
+    icon: Gift,
+    category: "handmade-gifts",
   },
   {
-    id: "custom-orders",
-    title: "Custom Creative Orders",
+    id: "personalized-gifts",
+    title: "Personalized Gifts",
     description:
-      "Have a unique creative idea? We bring it to life! From custom crafts to personalized designs, no creative request is too big or small.",
+      "One-of-a-kind personalized gifts with custom names, messages, and designs. Make every gift truly special.",
     features: [
-      "Any creative project",
-      "Collaborative process",
-      "Unique & one-of-a-kind",
-      "Satisfaction guaranteed",
+      "Custom engraving",
+      "Photo gifts",
+      "Name personalization",
+      "Gift wrapping included",
     ],
-    image: "/images/handmade-crafts.png",
+    image: "/images/custom-gifts.png",
+    icon: Gift,
+    category: "handmade-gifts",
+  },
+  {
+    id: "corporate-gifting",
+    title: "Corporate Gifting",
+    description:
+      "Elegant corporate gift solutions for teams, clients, and events. Professional packaging with brand customization.",
+    features: [
+      "Bulk orders",
+      "Brand customization",
+      "Professional packaging",
+      "Timely delivery",
+    ],
+    image: "/images/custom-gifts.png",
     icon: Star,
+    category: "handmade-gifts",
+  },
+
+  // --- Home Decor ---
+  {
+    id: "handmade-home-decor",
+    title: "Handmade Home Decor",
+    description:
+      "Beautifully handcrafted home decoration pieces that add warmth, character, and artistic charm to every corner of your home.",
+    features: [
+      "Unique handcrafted pieces",
+      "Eco-friendly materials",
+      "Custom color matching",
+      "Artisanal quality",
+    ],
+    image: "/images/home-decor.png",
+    icon: Home,
+    category: "home-decor",
+  },
+  {
+    id: "wall-decor",
+    title: "Wall Decor",
+    description:
+      "Artistic wall decorations including hangings, panels, and accent pieces that transform plain walls into stunning focal points.",
+    features: [
+      "Wall hangings & panels",
+      "Macramé & textile art",
+      "Metal & wood accents",
+      "Custom dimensions",
+    ],
+    image: "/images/wall-decor.png",
+    icon: Frame,
+    category: "home-decor",
+  },
+  {
+    id: "decorative-frames",
+    title: "Decorative Frames",
+    description:
+      "Hand-finished decorative frames for photos, mirrors, and artwork. Each frame is a work of art in itself.",
+    features: [
+      "Hand-carved details",
+      "Multiple finishes",
+      "Custom sizes",
+      "Mirror & photo frames",
+    ],
+    image: "/images/wall-decor.png",
+    icon: Frame,
+    category: "home-decor",
+  },
+  {
+    id: "festival-decorations",
+    title: "Festival Decorations",
+    description:
+      "Beautiful handcrafted decorations for Diwali, Navratri, Eid, Christmas, and all festive celebrations.",
+    features: [
+      "Festival-specific themes",
+      "Rangoli & torans",
+      "Eco-friendly materials",
+      "Bulk orders welcome",
+    ],
+    image: "/images/festival-decoration.png",
+    icon: Flower2,
+    category: "home-decor",
+  },
+  {
+    id: "customized-decorative-items",
+    title: "Customized Decor Items",
+    description:
+      "Bespoke decorative items tailored to your home's aesthetic — from table centerpieces to shelf accents.",
+    features: [
+      "Personalized designs",
+      "Color coordination",
+      "Table & shelf accents",
+      "Gift-ready packaging",
+    ],
+    image: "/images/home-decor.png",
+    icon: Sparkles,
+    category: "home-decor",
+  },
+  {
+    id: "artistic-interior-decor",
+    title: "Artistic Interior Decor",
+    description:
+      "Statement interior decor pieces that blend art with functionality — handcrafted vases, sculptures, and artistic accents.",
+    features: [
+      "Statement pieces",
+      "Handcrafted sculptures",
+      "Artistic vases",
+      "Interior consultation",
+    ],
+    image: "/images/home-decor.png",
+    icon: Home,
+    category: "home-decor",
   },
 ];
+
+// Helper: get services by category ID
+export function getServicesByCategory(categoryId: string): Service[] {
+  return SERVICES.filter((s) => s.category === categoryId);
+}
+
+// Helper: get a featured service from each category
+export function getFeaturedServices(): Service[] {
+  return SERVICE_CATEGORIES.map(
+    (cat) => SERVICES.find((s) => s.category === cat.id)!
+  );
+}
 
 // ===== PORTFOLIO =====
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: "mehndi" | "dresses" | "crafts" | "gifts";
+  category:
+    | "mehndi"
+    | "paintings"
+    | "sketches"
+    | "dresses"
+    | "crafts"
+    | "gifts"
+    | "home-decor";
   image: string;
 }
 
 export const PORTFOLIO_CATEGORIES = [
   { id: "all", label: "All" },
   { id: "mehndi", label: "Mehndi" },
-  { id: "dresses", label: "Dresses" },
+  { id: "paintings", label: "Paintings" },
+  { id: "sketches", label: "Sketches" },
   { id: "crafts", label: "Crafts" },
-  { id: "gifts", label: "Handmade Gifts" },
+  { id: "dresses", label: "Dress Designs" },
+  { id: "gifts", label: "Gifts" },
+  { id: "home-decor", label: "Home Decor" },
 ] as const;
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
+  // Mehndi
   { id: "p1", title: "Royal Bridal Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
   { id: "p2", title: "Engagement Special", category: "mehndi", image: "/images/engagement-mehndi.png" },
   { id: "p3", title: "Festival Celebration", category: "mehndi", image: "/images/festival-mehndi.png" },
   { id: "p4", title: "Traditional Patterns", category: "mehndi", image: "/images/hero-banner.png" },
+  { id: "p15", title: "Arabic Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
+
+  // Paintings
+  { id: "p17", title: "Abstract Canvas Art", category: "paintings", image: "/images/canvas-painting.png" },
+  { id: "p18", title: "Landscape Painting", category: "paintings", image: "/images/canvas-painting.png" },
+  { id: "p19", title: "Vibrant Acrylics", category: "paintings", image: "/images/canvas-painting.png" },
+  { id: "p20", title: "Floral Canvas Art", category: "paintings", image: "/images/canvas-painting.png" },
+
+  // Sketches
+  { id: "p21", title: "Pencil Portrait", category: "sketches", image: "/images/portrait-sketch.png" },
+  { id: "p22", title: "Charcoal Study", category: "sketches", image: "/images/charcoal-sketch.png" },
+  { id: "p23", title: "Figure Drawing", category: "sketches", image: "/images/portrait-sketch.png" },
+  { id: "p24", title: "Pet Portrait Sketch", category: "sketches", image: "/images/charcoal-sketch.png" },
+
+  // Dresses
   { id: "p5", title: "Designer Lehenga", category: "dresses", image: "/images/portfolio-dress.png" },
   { id: "p6", title: "Embroidered Suit", category: "dresses", image: "/images/dress-designing.png" },
   { id: "p7", title: "Fusion Wear", category: "dresses", image: "/images/portfolio-dress.png" },
   { id: "p8", title: "Bridal Outfit", category: "dresses", image: "/images/dress-designing.png" },
+  { id: "p16", title: "Custom Anarkali", category: "dresses", image: "/images/portfolio-dress.png" },
+
+  // Crafts
   { id: "p9", title: "Handpainted Art", category: "crafts", image: "/images/handmade-crafts.png" },
-  { id: "p10", title: "Wall Decor", category: "crafts", image: "/images/handmade-crafts.png" },
-  { id: "p11", title: "Custom Craft Piece", category: "crafts", image: "/images/custom-gifts.png" },
+  { id: "p10", title: "Wall Craft Piece", category: "crafts", image: "/images/handmade-crafts.png" },
+  { id: "p11", title: "Custom Craft Creation", category: "crafts", image: "/images/custom-gifts.png" },
+
+  // Gifts
   { id: "p12", title: "Wedding Gift Hamper", category: "gifts", image: "/images/custom-gifts.png" },
   { id: "p13", title: "Birthday Special", category: "gifts", image: "/images/custom-gifts.png" },
   { id: "p14", title: "Corporate Gifts", category: "gifts", image: "/images/handmade-crafts.png" },
-  { id: "p15", title: "Arabic Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
-  { id: "p16", title: "Custom Anarkali", category: "dresses", image: "/images/portfolio-dress.png" },
+
+  // Home Decor
+  { id: "p25", title: "Artistic Wall Hanging", category: "home-decor", image: "/images/wall-decor.png" },
+  { id: "p26", title: "Decorative Frame Set", category: "home-decor", image: "/images/wall-decor.png" },
+  { id: "p27", title: "Festival Decoration", category: "home-decor", image: "/images/festival-decoration.png" },
+  { id: "p28", title: "Handmade Table Decor", category: "home-decor", image: "/images/home-decor.png" },
+  { id: "p29", title: "Interior Accent Piece", category: "home-decor", image: "/images/home-decor.png" },
 ];
 
 // ===== TESTIMONIALS =====
@@ -272,7 +644,7 @@ export const TESTIMONIALS: Testimonial[] = [
 
 // ===== CONTACT =====
 export const CONTACT_INFO = {
-  phone: "+91 XXXXXXXXXX",
+  phone: "+91 9953889028",
   email: "hello@triveniarthhouse.com",
   address: "Your City, Your State, India",
   hours: {
@@ -280,7 +652,7 @@ export const CONTACT_INFO = {
     saturday: "10:00 AM – 5:00 PM",
     sunday: "By Appointment Only",
   },
-  whatsapp: "91XXXXXXXXXX",
+  whatsapp: "919953889028",
   social: {
     instagram: "https://instagram.com/triveniarthhouse",
     facebook: "https://facebook.com/triveniarthhouse",
@@ -311,6 +683,16 @@ export const WHY_CHOOSE_US = [
     description: "Hundreds of happy customers trust us with their most special moments and celebrations.",
     icon: "❤️",
   },
+  {
+    title: "Multi-Craft Expertise",
+    description: "From paintings and sketches to home decor and fashion — we master every creative discipline.",
+    icon: "🖼️",
+  },
+  {
+    title: "Premium Materials",
+    description: "We use only the finest materials — organic mehndi, artist-grade paints, premium fabrics, and quality craft supplies.",
+    icon: "👑",
+  },
 ];
 
 // ===== CREATIVE PROCESS =====
@@ -322,18 +704,23 @@ export const CREATIVE_PROCESS = [
   },
   {
     step: 2,
-    title: "Design Discussion",
+    title: "Design Planning",
     description: "We present design concepts, explore options together, and finalize the perfect approach for your project.",
   },
   {
     step: 3,
-    title: "Creation Process",
+    title: "Handmade Creation",
     description: "Our skilled artisans bring the design to life with meticulous craftsmanship and premium materials.",
   },
   {
     step: 4,
-    title: "Final Delivery",
-    description: "Your beautiful creation is carefully finished, quality-checked, and delivered with love and care.",
+    title: "Quality Review",
+    description: "Every creation undergoes careful quality inspection to ensure it meets our exacting standards of excellence.",
+  },
+  {
+    step: 5,
+    title: "Delivery",
+    description: "Your beautiful creation is carefully packaged and delivered to you with love and care.",
   },
 ];
 

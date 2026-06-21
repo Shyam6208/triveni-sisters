@@ -26,7 +26,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-burgundy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 dark:bg-dark-bg/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+          <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 dark:bg-dark-bg/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
             <Icon className="w-5 h-5 text-burgundy dark:text-antique-gold" />
           </div>
         </div>

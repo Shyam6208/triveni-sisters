@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
-import { SERVICES, BUDGET_RANGES, CONTACT_INFO } from "@/lib/constants";
+import { SERVICE_CATEGORIES, getServicesByCategory, BUDGET_RANGES, CONTACT_INFO } from "@/lib/constants";
 
 export default function BookingContent() {
   const [formData, setFormData] = useState({
@@ -140,10 +140,14 @@ export default function BookingContent() {
                           }
                         >
                           <option value="">Select a service</option>
-                          {SERVICES.map((s) => (
-                            <option key={s.id} value={s.title}>
-                              {s.title}
-                            </option>
+                          {SERVICE_CATEGORIES.map((cat) => (
+                            <optgroup key={cat.id} label={cat.title}>
+                              {getServicesByCategory(cat.id).map((s) => (
+                                <option key={s.id} value={s.title}>
+                                  {s.title}
+                                </option>
+                              ))}
+                            </optgroup>
                           ))}
                         </select>
                       </div>
