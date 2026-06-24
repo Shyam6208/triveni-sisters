@@ -17,6 +17,7 @@ export default function FeaturedGalleries({ items }: FeaturedGalleriesProps) {
     { id: "mehndi", title: "Featured Mehndi Designs", subtitle: "Intricate & elegant henna artistry" },
     { id: "rangoli", title: "Featured Rangoli Art", subtitle: "Vibrant traditional floor patterns" },
     { id: "paintings", title: "Featured Paintings", subtitle: "Original canvas & digital artworks" },
+    { id: "stitching", title: "Featured Stitching & Alterations", subtitle: "Expert tailoring & custom stitching work" },
     { id: "home-decor", title: "Featured Home Decor", subtitle: "Handcrafted interior aesthetics" },
   ];
 

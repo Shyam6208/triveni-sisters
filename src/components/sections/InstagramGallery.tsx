@@ -8,7 +8,7 @@ import { InstagramIcon } from "@/components/ui/SocialIcons";
 const INSTAGRAM_IMAGES = [
   { id: "ig1", src: "/images/bridal-mehndi.png", alt: "Bridal mehndi design" },
   { id: "ig2", src: "/images/canvas-painting.png", alt: "Canvas painting" },
-  { id: "ig3", src: "/images/dress-designing.png", alt: "Dress designing" },
+  { id: "ig3", src: "/images/stitching/5.jpeg", alt: "Stitching & alterations" },
   { id: "ig4", src: "/images/home-decor.png", alt: "Handmade home decor" },
   { id: "ig5", src: "/images/portrait-sketch.png", alt: "Portrait sketch" },
   { id: "ig6", src: "/images/custom-gifts.png", alt: "Custom gifts" },

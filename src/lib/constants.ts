@@ -384,7 +384,7 @@ export const SERVICES: Service[] = [
       "Embroidery & embellishments",
       "Design consultation",
     ],
-    image: "/images/dress-designing.png",
+    image: "/images/stitching/1.png",
     icon: Gem,
     category: "fashion-stitching",
   },
@@ -399,7 +399,7 @@ export const SERVICES: Service[] = [
       "Blouse stitching",
       "Express service available",
     ],
-    image: "/images/dress-designing.png",
+    image: "/images/stitching/2.png",
     icon: Scissors,
     category: "fashion-stitching",
   },
@@ -606,7 +606,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "Got my wedding outfit custom designed and it was beyond my expectations. The fabric quality, embroidery, and fit were all perfect. Will definitely come back for more!",
     rating: 5,
-    image: "/images/dress-designing.png",
+    image: "/images/stitching/3.jpeg",
   },
   {
     id: "t4",

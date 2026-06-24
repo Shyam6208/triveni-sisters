@@ -21,7 +21,7 @@ const SISTERS = [
     specialty: "Fashion, Paintings & Sketches",
     description:
       "A master of fabric and form, she creates bespoke outfits and original paintings. Her artistic vision spans from portrait sketches to vibrant canvas artworks.",
-    image: "/images/dress-designing.png",
+    image: "/images/stitching/6.png",
   },
   {
     name: "The Craft Creator",

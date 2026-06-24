@@ -11,7 +11,7 @@ const FEATURED_WORKS = [
   { id: "fw1", title: "Royal Bridal Mehndi", category: "Mehndi", image: "/images/bridal-mehndi.png", span: "large" },
   { id: "fw2", title: "Canvas Masterpiece", category: "Painting", image: "/images/canvas-painting.png", span: "small" },
   { id: "fw3", title: "Pencil Portrait", category: "Sketch", image: "/images/portrait-sketch.png", span: "small" },
-  { id: "fw4", title: "Designer Lehenga", category: "Fashion", image: "/images/portfolio-dress.png", span: "small" },
+  { id: "fw4", title: "Designer Lehenga", category: "Fashion", image: "/images/stitching/4.jpeg", span: "small" },
   { id: "fw5", title: "Handcrafted Decor", category: "Home Decor", image: "/images/home-decor.png", span: "small" },
   { id: "fw6", title: "Custom Gift Hamper", category: "Gifts", image: "/images/custom-gifts.png", span: "large" },
 ];
