@@ -49,6 +49,14 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     serviceIds: ["bridal-mehndi", "engagement-mehndi", "festival-mehndi"],
   },
   {
+    id: "rangoli-art",
+    title: "Rangoli Art",
+    description:
+      "Traditional and contemporary Rangoli creations crafted to bring beauty, positivity, and artistic elegance to every celebration.",
+    icon: Flower2,
+    serviceIds: ["wedding-rangoli", "festival-rangoli", "floral-rangoli", "custom-rangoli"],
+  },
+  {
     id: "art-craft",
     title: "Art & Craft",
     description:
@@ -161,6 +169,68 @@ export const SERVICES: Service[] = [
     image: "/images/festival-mehndi.png",
     icon: Sparkles,
     category: "mehndi-arts",
+  },
+
+  // --- Rangoli Art ---
+  {
+    id: "wedding-rangoli",
+    title: "Wedding Rangoli",
+    description:
+      "Stunning entrance and venue Rangoli designs for weddings. From grand traditional patterns to intricate modern floral concepts.",
+    features: [
+      "Grand entrance designs",
+      "Traditional & modern styles",
+      "Custom theme matching",
+      "Long-lasting colors",
+    ],
+    image: "/images/festival-decoration.png",
+    icon: Heart,
+    category: "rangoli-art",
+  },
+  {
+    id: "festival-rangoli",
+    title: "Festival Rangoli",
+    description:
+      "Vibrant and festive Rangoli art for Diwali, Navratri, Pongal, and all auspicious occasions. Bringing colors of joy to your celebrations.",
+    features: [
+      "Festive themes",
+      "Vibrant color palettes",
+      "Traditional motifs",
+      "Outdoor & indoor",
+    ],
+    image: "/images/festival-decoration.png",
+    icon: Sparkles,
+    category: "rangoli-art",
+  },
+  {
+    id: "floral-rangoli",
+    title: "Floral Rangoli",
+    description:
+      "Elegant Pookalam and floral Rangoli created with fresh, fragrant flowers. Perfect for elegant ceremonies and eco-friendly celebrations.",
+    features: [
+      "Fresh flowers",
+      "Eco-friendly designs",
+      "Pookalam concepts",
+      "Aromatic aesthetics",
+    ],
+    image: "/images/festival-decoration.png",
+    icon: Flower2,
+    category: "rangoli-art",
+  },
+  {
+    id: "custom-rangoli",
+    title: "Custom Event Rangoli",
+    description:
+      "Bespoke Rangoli art for corporate events, inaugurations, and special themes. Customized with brand colors or event motifs.",
+    features: [
+      "Corporate event designs",
+      "Logo integration",
+      "Specific color matching",
+      "Large scale installations",
+    ],
+    image: "/images/handmade-crafts.png",
+    icon: Star,
+    category: "rangoli-art",
   },
 
   // --- Art & Craft ---
@@ -494,6 +564,7 @@ export interface PortfolioItem {
     | "mehndi"
     | "paintings"
     | "sketches"
+    | "rangoli"
     | "dresses"
     | "crafts"
     | "gifts"
@@ -506,6 +577,7 @@ export const PORTFOLIO_CATEGORIES = [
   { id: "mehndi", label: "Mehndi" },
   { id: "paintings", label: "Paintings" },
   { id: "sketches", label: "Sketches" },
+  { id: "rangoli", label: "Rangoli Art" },
   { id: "crafts", label: "Crafts" },
   { id: "dresses", label: "Dress Designs" },
   { id: "gifts", label: "Gifts" },
@@ -517,6 +589,10 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   { id: "m1", title: "Royal Bridal Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
   { id: "m2", title: "Minimalist Engagement Henna", category: "mehndi", image: "/images/engagement-mehndi.png" },
   { id: "m3", title: "Festive Diwali Mehndi", category: "mehndi", image: "/images/festival-mehndi.png" },
+
+  // Rangoli
+  { id: "r1", title: "Grand Wedding Entrance Rangoli", category: "rangoli", image: "/images/festival-decoration.png" },
+  { id: "r2", title: "Vibrant Diwali Floral Rangoli", category: "rangoli", image: "/images/handmade-crafts.png" },
 
   // Paintings
   { id: "p1", title: "Abstract Canvas Splashes", category: "paintings", image: "/images/canvas-painting.png" },

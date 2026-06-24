@@ -18,15 +18,15 @@ const FEATURED_WORKS = [
 
 export default function FeaturedCreativeWorks() {
   return (
-    <section className="py-20 md:py-28" id="featured-creative-works">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-16 sm:py-20 md:py-28" id="featured-creative-works">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6">
         <SectionHeading
           title="Featured Creative Works"
           subtitle="A curated showcase of our finest creations across paintings, sketches, mehndi, fashion, crafts, and decor"
         />
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[240px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 auto-rows-[150px] sm:auto-rows-[200px] md:auto-rows-[240px]">
           {FEATURED_WORKS.map((work, i) => (
             <AnimatedSection
               key={work.id}

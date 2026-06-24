@@ -42,20 +42,20 @@ export default function Navbar() {
         }`}
         id="main-navbar"
       >
-        <nav className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" id="nav-logo">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0" id="nav-logo">
             <div className="relative">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-burgundy to-burgundy-dark flex items-center justify-center shadow-lg group-hover:shadow-[0_0_20px_rgba(122,31,61,0.3)] transition-shadow duration-500">
-                <span className="font-heading text-white text-lg md:text-xl font-bold">T</span>
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-burgundy to-burgundy-dark flex items-center justify-center shadow-lg group-hover:shadow-[0_0_20px_rgba(122,31,61,0.3)] transition-shadow duration-500">
+                <span className="font-heading text-white text-base sm:text-lg md:text-xl font-bold">T</span>
               </div>
               <div className="absolute -inset-1 rounded-full border border-antique-gold/30 group-hover:border-antique-gold/60 transition-colors duration-500" />
             </div>
-            <div className="hidden sm:block">
-              <span className="font-heading text-lg md:text-xl font-bold text-charcoal dark:text-dark-text block leading-tight">
+            <div className="hidden xs:block">
+              <span className="font-heading text-sm sm:text-base md:text-lg lg:text-xl font-bold text-charcoal dark:text-dark-text block leading-tight">
                 Triveni
               </span>
-              <span className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-rose-gold font-body">
+              <span className="text-[8px] sm:text-[10px] md:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase text-rose-gold font-body">
                 Art House
               </span>
             </div>
@@ -94,15 +94,15 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-1 sm:gap-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="w-10 h-10 rounded-full flex items-center justify-center text-charcoal dark:text-dark-text hover:bg-burgundy/10 dark:hover:bg-antique-gold/10 transition-colors cursor-pointer"
+              className="w-11 h-11 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-charcoal dark:text-dark-text hover:bg-burgundy/10 dark:hover:bg-antique-gold/10 transition-colors cursor-pointer touch-target"
               aria-label="Toggle menu"
               id="mobile-menu-toggle"
             >
-              {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           </div>
         </nav>
@@ -123,7 +123,7 @@ export default function Navbar() {
               className="absolute inset-0 bg-charcoal/50 backdrop-blur-sm"
               onClick={() => setIsMobileOpen(false)}
             />
-            <motion.div className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-[var(--background)] shadow-2xl flex flex-col pt-24 px-6 pb-8 overflow-y-auto">
+            <motion.div className="absolute right-0 top-0 bottom-0 w-[90vw] sm:w-80 max-w-sm bg-[var(--background)] shadow-2xl flex flex-col pt-20 sm:pt-24 px-5 sm:px-6 pb-8 overflow-y-auto">
               {/* Decorative top line */}
               <div className="absolute top-0 left-0 right-0 h-1 gradient-gold-line" />
 
@@ -137,7 +137,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                      className={`block px-4 py-3.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition-colors touch-target ${
                         pathname === link.href
                           ? "text-burgundy dark:text-antique-gold bg-burgundy/5 dark:bg-antique-gold/5"
                           : "text-charcoal dark:text-dark-text hover:text-burgundy dark:hover:text-antique-gold hover:bg-burgundy/5 dark:hover:bg-antique-gold/5"
@@ -150,7 +150,7 @@ export default function Navbar() {
               </div>
 
               <div className="mt-auto pt-6 border-t border-[var(--border)]">
-                <Button href="/booking" variant="primary" size="md" className="w-full">
+                <Button href="/booking" variant="primary" size="md" className="w-full text-sm sm:text-base">
                   Book Consultation
                 </Button>
               </div>

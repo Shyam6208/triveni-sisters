@@ -35,17 +35,17 @@ export default function BookingContent() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 gradient-hero overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-40 pb-14 sm:pb-16 md:pb-28 gradient-hero overflow-hidden">
         <div className="absolute inset-0 mehndi-pattern" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-5 md:px-6 text-center">
           <AnimatedSection variant="fadeUp">
-            <div className="ornament-line mb-6">
-              <span className="text-antique-gold text-2xl">✦</span>
+            <div className="ornament-line mb-4 sm:mb-6">
+              <span className="text-antique-gold text-xl sm:text-2xl">✦</span>
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
               Book Your Consultation
             </h1>
-            <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2">
               Ready to bring your creative vision to life? Fill out the form below and we&apos;ll get back to you within 24 hours.
             </p>
           </AnimatedSection>
@@ -54,25 +54,25 @@ export default function BookingContent() {
       </section>
 
       {/* Booking Form Section */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section className="py-14 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
             {/* Form */}
             <AnimatedSection variant="slideLeft" className="lg:col-span-2">
-              <div className="bg-[var(--surface)] dark:bg-dark-surface rounded-3xl p-6 md:p-10 border border-[var(--border)] shadow-[var(--shadow-card)]">
+              <div className="bg-[var(--surface)] dark:bg-dark-surface rounded-3xl p-5 sm:p-6 md:p-10 border border-[var(--border)] shadow-[var(--shadow-card)]">
                 {submitted ? (
-                  <div className="text-center py-16">
-                    <div className="text-6xl mb-4">✨</div>
-                    <h3 className="font-heading text-2xl font-bold text-charcoal dark:text-dark-text mb-3">
+                  <div className="text-center py-12 sm:py-16">
+                    <div className="text-5xl sm:text-6xl mb-4">✨</div>
+                    <h3 className="font-heading text-xl sm:text-2xl font-bold text-charcoal dark:text-dark-text mb-3">
                       Thank You!
                     </h3>
-                    <p className="text-charcoal-light dark:text-dark-text-muted">
+                    <p className="text-sm sm:text-base text-charcoal-light dark:text-dark-text-muted">
                       We&apos;ve received your inquiry and will get back to you within 24 hours.
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6" id="booking-form">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6" id="booking-form">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
                         <label htmlFor="name" className={labelClasses}>
                           Full Name *
@@ -205,7 +205,7 @@ export default function BookingContent() {
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-base md:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
                       >
                         <MessageCircle className="w-6 h-6" />
                         Book via WhatsApp

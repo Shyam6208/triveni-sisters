@@ -9,8 +9,8 @@ const STEP_ICONS = [MessageCircle, PenLine, Hand, ShieldCheck, PackageCheck];
 
 export default function CreativeProcess() {
   return (
-    <section className="py-20 md:py-28" id="creative-process">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section className="py-16 sm:py-20 md:py-28" id="creative-process">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6">
         <SectionHeading
           title="Our Creative Process"
           subtitle="From your initial vision to the final masterpiece — here's how we bring your ideas to life"

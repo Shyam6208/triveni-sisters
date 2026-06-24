@@ -6,8 +6,9 @@ import AboutPreview from "@/components/sections/AboutPreview";
 import PortfolioHighlights from "@/components/sections/PortfolioHighlights";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import CreativeProcess from "@/components/sections/CreativeProcess";
+import CelebrationArtistry from "@/components/sections/CelebrationArtistry";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import InstagramGallery from "@/components/sections/InstagramGallery";
+import InstagramFeed from "@/components/sections/InstagramFeed";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export default function HomePage() {
@@ -21,8 +22,9 @@ export default function HomePage() {
       <PortfolioHighlights />
       <WhyChooseUs />
       <CreativeProcess />
+      <CelebrationArtistry />
       <TestimonialsSection />
-      <InstagramGallery />
+      <InstagramFeed />
       <ContactCTA />
     </>
   );

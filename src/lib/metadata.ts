@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://triveniarthhouse.com";
 const SITE_NAME = "Triveni Art House";
 const DEFAULT_DESCRIPTION =
-  "Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio Where Art, Tradition & Creativity Come Together.";
+  "Premium Mehndi, Paintings, Sketches, Rangoli Art, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio Where Art, Tradition & Creativity Come Together.";
 
 export function generatePageMetadata({
   title,
@@ -34,6 +34,14 @@ export function generatePageMetadata({
       "charcoal sketch",
       "pencil sketch",
       "digital artwork",
+      "rangoli artist",
+      "wedding rangoli",
+      "festival rangoli",
+      "floral rangoli",
+      "traditional rangoli",
+      "custom rangoli design",
+      "event decoration",
+      "handmade rangoli art",
       "art and craft",
       "handmade gifts",
       "dress designing",

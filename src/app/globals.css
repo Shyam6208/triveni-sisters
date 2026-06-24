@@ -153,6 +153,11 @@ h1, h2, h3, h4, h5, h6 {
   to { width: 100%; }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== DECORATIVE ELEMENTS ===== */
 
 .ornament-line {
@@ -284,6 +289,113 @@ h1, h2, h3, h4, h5, h6 {
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+
+.container-responsive {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Touch-friendly minimum tap target (48x48px) */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 640px) {
+  .touch-target {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Mobile-first responsive spacing */
+.px-responsive {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .px-responsive {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .px-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Responsive typography scaling */
+@media (max-width: 640px) {
+  .text-responsive-lg {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive-lg {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1025px) {
+  .text-responsive-lg {
+    font-size: 2.25rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
 }
 
 /* ===== UTILITY ===== */

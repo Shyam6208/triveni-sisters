@@ -6,6 +6,7 @@ import { InstagramIcon, FacebookIcon, YouTubeIcon } from "@/components/ui/Social
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import FAQ from "@/components/sections/FAQ";
 import { CONTACT_INFO } from "@/lib/constants";
 
 export default function ContactContent() {
@@ -64,17 +65,17 @@ export default function ContactContent() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 gradient-hero overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-40 pb-14 sm:pb-16 md:pb-28 gradient-hero overflow-hidden">
         <div className="absolute inset-0 mehndi-pattern" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-5 md:px-6 text-center">
           <AnimatedSection variant="fadeUp">
-            <div className="ornament-line mb-6">
-              <span className="text-antique-gold text-2xl">✦</span>
+            <div className="ornament-line mb-4 sm:mb-6">
+              <span className="text-antique-gold text-xl sm:text-2xl">✦</span>
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
               Get In Touch
             </h1>
-            <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2">
               We&apos;d love to hear from you. Reach out through any of the channels below.
             </p>
           </AnimatedSection>
@@ -83,9 +84,9 @@ export default function ContactContent() {
       </section>
 
       {/* Contact Cards */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <section className="py-14 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {CONTACT_CARDS.map((card, i) => {
               const Icon = card.icon;
               return (
@@ -186,7 +187,7 @@ export default function ContactContent() {
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 md:px-7 md:py-4 rounded-full bg-[#25D366] text-white font-medium hover:bg-[#20BD5A] transition-all duration-300 text-base md:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
                       >
                         <Send className="w-5 h-5" />
                         Message via WhatsApp
@@ -223,6 +224,9 @@ export default function ContactContent() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
     </>
   );
 }

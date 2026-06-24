@@ -22,6 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://triveniarthhouse.com"),
   title: "Triveni Art House | Premium Mehndi, Paintings, Sketches, Fashion & Home Decor",
   description:
     "Where Art, Tradition & Creativity Come Together. Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. Book your consultation today.",

@@ -9,7 +9,7 @@ export default function NotFound() {
           <span className="font-heading text-white text-3xl font-bold">T</span>
         </div>
 
-        <h1 className="font-heading text-6xl md:text-8xl font-bold gradient-text mb-4">404</h1>
+        <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl font-bold gradient-text mb-4">404</h1>
         <h2 className="font-heading text-2xl font-bold text-charcoal dark:text-dark-text mb-4">
           Page Not Found
         </h2>
