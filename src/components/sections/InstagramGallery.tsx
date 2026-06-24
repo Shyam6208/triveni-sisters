@@ -29,7 +29,7 @@ export default function InstagramGallery() {
           {INSTAGRAM_IMAGES.map((img, i) => (
             <AnimatedSection key={img.id} delay={i * 0.06} variant="scale">
               <a
-                href="https://instagram.com/triveniarthhouse"
+                href="https://instagram.com/triveni.arthouse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative aspect-square rounded-xl overflow-hidden block"

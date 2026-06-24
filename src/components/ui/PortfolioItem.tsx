@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PortfolioItem as PortfolioItemType } from "@/lib/constants";
+import type { PortfolioItem as PortfolioItemType } from "@/lib/portfolioUtils";
 
 // Aspect ratio patterns for masonry variety
 const ASPECT_PATTERNS = [

@@ -4,21 +4,17 @@ import Image from "next/image";
 import { Heart, MessageCircle } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { PORTFOLIO_ITEMS, CONTACT_INFO } from "@/lib/constants";
+import { CONTACT_INFO } from "@/lib/constants";
 import { InstagramIcon } from "@/components/ui/SocialIcons";
+import type { PortfolioItem } from "@/lib/portfolioUtils";
 
-export default function InstagramFeed() {
+interface InstagramFeedProps {
+  items?: PortfolioItem[];
+}
+
+export default function InstagramFeed({ items = [] }: InstagramFeedProps) {
   // Grab a visually diverse mix of items to mock the IG feed
-  const feedItems = [
-    PORTFOLIO_ITEMS[0], // Bridal Mehndi
-    PORTFOLIO_ITEMS[4], // Digital Mandala
-    PORTFOLIO_ITEMS[5], // Portrait
-    PORTFOLIO_ITEMS[7], // Dress
-    PORTFOLIO_ITEMS[9], // Crafts
-    PORTFOLIO_ITEMS[12], // Wall Art
-    PORTFOLIO_ITEMS[1], // Engagement Mehndi
-    PORTFOLIO_ITEMS[3], // Canvas Painting
-  ].filter(Boolean); // Safety check in case array changes
+  const feedItems = items.slice(0, 8);
 
   return (
     <section className="py-16 sm:py-20 md:py-28 overflow-hidden">

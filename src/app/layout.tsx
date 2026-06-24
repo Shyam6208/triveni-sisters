@@ -22,7 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://triveniarthhouse.com"),
+  metadataBase: new URL("https://triveni-art-house.netlify.app"),
   title: "Triveni Art House | Premium Mehndi, Paintings, Sketches, Fashion & Home Decor",
   description:
     "Where Art, Tradition & Creativity Come Together. Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. Book your consultation today.",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://triveniarthhouse.com",
+    url: "https://triveni-art-house.netlify.app",
     title: "Triveni Art House | Premium Mehndi, Paintings, Sketches, Fashion & Home Decor",
     description:
       "Premium Mehndi, Paintings, Sketches, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio.",
@@ -85,7 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-body antialiased">
+      <body className="min-h-screen flex flex-col font-body antialiased overflow-x-hidden w-full relative">
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

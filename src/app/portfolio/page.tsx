@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PortfolioContent from "./PortfolioContent";
 import { generatePageMetadata } from "@/lib/metadata";
+import { getPortfolioItems } from "@/lib/portfolioUtils";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Portfolio",
@@ -10,5 +11,6 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function PortfolioPage() {
-  return <PortfolioContent />;
+  const items = getPortfolioItems();
+  return <PortfolioContent items={items} />;
 }

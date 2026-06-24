@@ -125,7 +125,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-3 md:gap-4"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center"
           >
             <Button href="/portfolio" variant="gold" size="md" className="md:px-9 md:py-4 md:text-lg" id="hero-explore-cta">
               Explore Our Work

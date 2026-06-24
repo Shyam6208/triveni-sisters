@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://triveniarthhouse.com";
+const SITE_URL = "https://triveni-art-house.netlify.app";
 const SITE_NAME = "Triveni Art House";
 const DEFAULT_DESCRIPTION =
   "Premium Mehndi, Paintings, Sketches, Rangoli Art, Art & Craft, Dress Designing, Handmade Gifts & Home Decor by Three Sisters. A Complete Creative Studio Where Art, Tradition & Creativity Come Together.";
@@ -116,7 +116,7 @@ export function generateSchemaMarkup() {
       },
     ],
     sameAs: [
-      "https://instagram.com/triveniarthhouse",
+      "https://instagram.com/triveni.arthouse",
       "https://facebook.com/triveniarthhouse",
       "https://youtube.com/@triveniarthhouse",
     ],

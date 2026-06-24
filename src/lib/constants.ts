@@ -556,66 +556,18 @@ export function getFeaturedServices(): Service[] {
   );
 }
 
-// ===== PORTFOLIO =====
-export interface PortfolioItem {
-  id: string;
-  title: string;
-  category:
-    | "mehndi"
-    | "paintings"
-    | "sketches"
-    | "rangoli"
-    | "dresses"
-    | "crafts"
-    | "gifts"
-    | "home-decor";
-  image: string;
-}
-
 export const PORTFOLIO_CATEGORIES = [
   { id: "all", label: "All" },
   { id: "mehndi", label: "Mehndi" },
+  { id: "rangoli", label: "Rangoli Art" },
   { id: "paintings", label: "Paintings" },
   { id: "sketches", label: "Sketches" },
-  { id: "rangoli", label: "Rangoli Art" },
-  { id: "crafts", label: "Crafts" },
-  { id: "dresses", label: "Dress Designs" },
-  { id: "gifts", label: "Gifts" },
+  { id: "crafts", label: "Art & Craft" },
+  { id: "gifts", label: "Handmade Gifts" },
+  { id: "dresses", label: "Dress Designing" },
+  { id: "stitching", label: "Stitching" },
   { id: "home-decor", label: "Home Decor" },
-] as const;
-
-export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  // Mehndi
-  { id: "m1", title: "Royal Bridal Mehndi", category: "mehndi", image: "/images/bridal-mehndi.png" },
-  { id: "m2", title: "Minimalist Engagement Henna", category: "mehndi", image: "/images/engagement-mehndi.png" },
-  { id: "m3", title: "Festive Diwali Mehndi", category: "mehndi", image: "/images/festival-mehndi.png" },
-
-  // Rangoli
-  { id: "r1", title: "Grand Wedding Entrance Rangoli", category: "rangoli", image: "/images/festival-decoration.png" },
-  { id: "r2", title: "Vibrant Diwali Floral Rangoli", category: "rangoli", image: "/images/handmade-crafts.png" },
-
-  // Paintings
-  { id: "p1", title: "Abstract Canvas Splashes", category: "paintings", image: "/images/canvas-painting.png" },
-  { id: "p2", title: "Modern Digital Mandala", category: "paintings", image: "/images/digital-artwork.png" },
-
-  // Sketches
-  { id: "s1", title: "Hyper-realistic Pencil Portrait", category: "sketches", image: "/images/portrait-sketch.png" },
-  { id: "s2", title: "Dramatic Charcoal Dancer", category: "sketches", image: "/images/charcoal-sketch.png" },
-
-  // Dresses
-  { id: "d1", title: "Deep Burgundy Fusion Lehenga", category: "dresses", image: "/images/dress-designing.png" },
-  { id: "d2", title: "Modern Bridal Anarkali", category: "dresses", image: "/images/portfolio-dress.png" },
-
-  // Crafts
-  { id: "c1", title: "Mixed Media Resin Art", category: "crafts", image: "/images/handmade-crafts.png" },
-
-  // Gifts
-  { id: "g1", title: "Luxury Bespoke Gift Hamper", category: "gifts", image: "/images/custom-gifts.png" },
-
-  // Home Decor
-  { id: "h1", title: "Handcrafted Artisanal Vases", category: "home-decor", image: "/images/home-decor.png" },
-  { id: "h2", title: "Metallic Macrame Wall Art", category: "home-decor", image: "/images/wall-decor.png" },
-  { id: "h3", title: "Festive Diwali Setup", category: "home-decor", image: "/images/festival-decoration.png" },
+  { id: "custom-orders", label: "Custom Orders" },
 ];
 
 // ===== TESTIMONIALS =====
@@ -715,7 +667,7 @@ export const CONTACT_INFO = {
   },
   whatsapp: "919953889028",
   social: {
-    instagram: "https://instagram.com/triveniarthhouse",
+    instagram: "https://instagram.com/triveni.arthouse",
     facebook: "https://facebook.com/triveniarthhouse",
     youtube: "https://youtube.com/@triveniarthhouse",
     pinterest: "https://pinterest.com/triveniarthhouse",

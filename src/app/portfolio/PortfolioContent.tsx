@@ -7,12 +7,15 @@ import PortfolioItem from "@/components/ui/PortfolioItem";
 import Lightbox from "@/components/ui/Lightbox";
 import ContactCTA from "@/components/sections/ContactCTA";
 import {
-  PORTFOLIO_ITEMS,
   PORTFOLIO_CATEGORIES,
-  type PortfolioItem as PortfolioItemType,
 } from "@/lib/constants";
+import type { PortfolioItem as PortfolioItemType } from "@/lib/portfolioUtils";
 
-export default function PortfolioContent() {
+interface PortfolioContentProps {
+  items: PortfolioItemType[];
+}
+
+export default function PortfolioContent({ items }: PortfolioContentProps) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -20,15 +23,15 @@ export default function PortfolioContent() {
   const filteredItems = useMemo(
     () =>
       activeCategory === "all"
-        ? PORTFOLIO_ITEMS
-        : PORTFOLIO_ITEMS.filter((item) => item.category === activeCategory),
+        ? items
+        : items.filter((item) => item.category === activeCategory),
     [activeCategory]
   );
 
   // Count items per category
   const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = { all: PORTFOLIO_ITEMS.length };
-    PORTFOLIO_ITEMS.forEach((item) => {
+    const counts: Record<string, number> = { all: items.length };
+    items.forEach((item) => {
       counts[item.category] = (counts[item.category] || 0) + 1;
     });
     return counts;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useCallback } from "react";
-import type { PortfolioItem } from "@/lib/constants";
+import type { PortfolioItem } from "@/lib/portfolioUtils";
 
 interface LightboxProps {
   items: PortfolioItem[];

@@ -3,15 +3,18 @@ import FeaturedCreativeWorks from "@/components/sections/FeaturedCreativeWorks";
 import CreativeCategories from "@/components/sections/CreativeCategories";
 import FeaturedServices from "@/components/sections/FeaturedServices";
 import AboutPreview from "@/components/sections/AboutPreview";
-import PortfolioHighlights from "@/components/sections/PortfolioHighlights";
+import FeaturedGalleries from "@/components/sections/FeaturedGalleries";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import CreativeProcess from "@/components/sections/CreativeProcess";
 import CelebrationArtistry from "@/components/sections/CelebrationArtistry";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import InstagramFeed from "@/components/sections/InstagramFeed";
 import ContactCTA from "@/components/sections/ContactCTA";
+import { getPortfolioItems } from "@/lib/portfolioUtils";
 
 export default function HomePage() {
+  const portfolioItems = getPortfolioItems();
+
   return (
     <>
       <HeroSection />
@@ -19,12 +22,12 @@ export default function HomePage() {
       <CreativeCategories />
       <FeaturedServices />
       <AboutPreview />
-      <PortfolioHighlights />
+      <FeaturedGalleries items={portfolioItems} />
       <WhyChooseUs />
       <CreativeProcess />
       <CelebrationArtistry />
       <TestimonialsSection />
-      <InstagramFeed />
+      <InstagramFeed items={portfolioItems} />
       <ContactCTA />
     </>
   );
