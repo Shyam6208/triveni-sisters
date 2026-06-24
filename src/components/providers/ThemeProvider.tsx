@@ -16,13 +16,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     const saved = localStorage.getItem("triveni-theme") as Theme | null;
     if (saved) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme(saved);
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
   }, []);
 
   useEffect(() => {

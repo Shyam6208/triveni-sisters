@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import Button from "@/components/ui/Button";
 import { SERVICE_CATEGORIES, getServicesByCategory, BUDGET_RANGES, CONTACT_INFO } from "@/lib/constants";
 
 export default function BookingContent() {
@@ -16,7 +15,7 @@ export default function BookingContent() {
     budget: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const submitted = false;
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();

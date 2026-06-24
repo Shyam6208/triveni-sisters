@@ -25,7 +25,7 @@ export default function PortfolioContent({ items }: PortfolioContentProps) {
       activeCategory === "all"
         ? items
         : items.filter((item) => item.category === activeCategory),
-    [activeCategory]
+    [activeCategory, items]
   );
 
   // Count items per category
@@ -35,7 +35,7 @@ export default function PortfolioContent({ items }: PortfolioContentProps) {
       counts[item.category] = (counts[item.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [items]);
 
   const handleItemClick = useCallback(
     (item: PortfolioItemType) => {

@@ -5,7 +5,6 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from "@/components/ui/SocialIcons";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
 import FAQ from "@/components/sections/FAQ";
 import { CONTACT_INFO } from "@/lib/constants";
 
@@ -16,7 +15,7 @@ export default function ContactContent() {
     subject: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const submitted = false;
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();

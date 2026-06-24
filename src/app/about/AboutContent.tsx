@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Heart, Palette, Gem, Sparkles, Brush, Home } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
 import ContactCTA from "@/components/sections/ContactCTA";
 import { BRAND_VALUES } from "@/lib/constants";
 
@@ -69,6 +68,7 @@ export default function AboutContent() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
                   />
                 </div>
                 <div className="absolute -inset-4 rounded-3xl border border-antique-gold/20 -z-10 hidden md:block" />

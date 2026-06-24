@@ -20,10 +20,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setIsMobileOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = isMobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [isMobileOpen]);
@@ -97,6 +93,8 @@ export default function Navbar() {
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="w-11 h-11 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-charcoal dark:text-dark-text hover:bg-burgundy/10 dark:hover:bg-antique-gold/10 transition-colors cursor-pointer touch-target"
               aria-label="Toggle menu"
+              aria-expanded={isMobileOpen}
+              aria-controls="mobile-menu"
               id="mobile-menu-toggle"
             >
               {isMobileOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
@@ -115,6 +113,7 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-40 lg:hidden"
             id="mobile-menu"
+            aria-hidden={!isMobileOpen}
           >
             <div
               className="absolute inset-0 bg-charcoal/50 backdrop-blur-sm"
@@ -134,6 +133,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
+                      onClick={() => setIsMobileOpen(false)}
                       className={`block px-4 py-3.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition-colors touch-target ${
                         pathname === link.href
                           ? "text-burgundy dark:text-antique-gold bg-burgundy/5 dark:bg-antique-gold/5"

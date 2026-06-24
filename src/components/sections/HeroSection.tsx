@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Button from "@/components/ui/Button";
@@ -53,16 +52,22 @@ export default function HeroSection() {
         className="absolute top-20 right-20 w-32 h-32 rounded-full border border-antique-gold/20 hidden lg:block"
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform" }}
+        aria-hidden="true"
       />
       <motion.div
         className="absolute bottom-40 right-40 w-20 h-20 rounded-full border border-rose-gold/15 hidden lg:block"
         animate={{ rotate: -360 }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform" }}
+        aria-hidden="true"
       />
       <motion.div
         className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-antique-gold/40 hidden lg:block"
         animate={{ y: [0, -20, 0], opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 3, repeat: Infinity }}
+        style={{ willChange: "transform, opacity" }}
+        aria-hidden="true"
       />
 
       {/* Content */}
@@ -129,7 +134,7 @@ export default function HeroSection() {
           >
             <Button href="/portfolio" variant="gold" size="md" className="md:px-9 md:py-4 md:text-lg" id="hero-explore-cta">
               Explore Our Work
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Button>
             <Button href="/booking" variant="outline" size="md" className="border-white/40 text-white hover:bg-white/10 hover:text-white dark:border-white/40 dark:text-white dark:hover:bg-white/10 dark:hover:text-white md:px-9 md:py-4 md:text-lg" id="hero-booking-cta">
               Book Consultation

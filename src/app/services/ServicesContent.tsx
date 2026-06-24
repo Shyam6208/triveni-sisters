@@ -3,7 +3,6 @@
 import { useState, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ContactCTA from "@/components/sections/ContactCTA";
 import {

@@ -13,6 +13,9 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   id?: string;
+  ariaLabel?: string;
+  ariaExpanded?: boolean;
+  ariaControls?: string;
 }
 
 const baseStyles =
@@ -47,19 +50,38 @@ export default function Button({
   className = "",
   disabled = false,
   id,
+  ariaLabel,
+  ariaExpanded,
+  ariaControls,
 }: ButtonProps) {
   const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} ${className}`;
 
   if (href) {
     return (
-      <Link href={href} className={classes} id={id}>
+      <Link 
+        href={href} 
+        className={classes} 
+        id={id}
+        aria-label={ariaLabel}
+        aria-expanded={ariaExpanded}
+        aria-controls={ariaControls}
+      >
         <span className="relative z-10 flex items-center gap-2">{children}</span>
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes} disabled={disabled} id={id}>
+    <button 
+      type={type} 
+      onClick={onClick} 
+      className={classes} 
+      disabled={disabled} 
+      id={id}
+      aria-label={ariaLabel}
+      aria-expanded={ariaExpanded}
+      aria-controls={ariaControls}
+    >
       <span className="relative z-10 flex items-center gap-2">{children}</span>
     </button>
   );
