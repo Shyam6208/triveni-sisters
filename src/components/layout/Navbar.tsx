@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -87,7 +86,6 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
-            <ThemeToggle />
             <Button href="/booking" variant="primary" size="sm">
               Book Consultation
             </Button>
@@ -95,7 +93,6 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <div className="flex lg:hidden items-center gap-1 sm:gap-2">
-            <ThemeToggle />
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="w-11 h-11 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-charcoal dark:text-dark-text hover:bg-burgundy/10 dark:hover:bg-antique-gold/10 transition-colors cursor-pointer touch-target"
