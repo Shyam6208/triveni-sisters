@@ -13,7 +13,7 @@ const SISTERS = [
     specialty: "Mehndi & Henna Artistry",
     description:
       "With an extraordinary eye for detail and years of practice, she transforms hands into canvases of intricate beauty — from traditional bridal patterns to modern Arabic designs.",
-    image: "/images/bridal-mehndi.png",
+    image: "/images/mehndi/1.jpeg",
   },
   {
     name: "The Fashion Designer",
@@ -27,7 +27,7 @@ const SISTERS = [
     specialty: "Crafts, Gifts & Home Decor",
     description:
       "With boundless creativity, she crafts unique art pieces, personalized gifts, and beautiful home decorations that transform any space into a work of art.",
-    image: "/images/handmade-crafts.png",
+    image: "/images/crafts/1.jpeg",
   },
 ];
 

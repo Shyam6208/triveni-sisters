@@ -6,14 +6,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { InstagramIcon } from "@/components/ui/SocialIcons";
 
 const INSTAGRAM_IMAGES = [
-  { id: "ig1", src: "/images/bridal-mehndi.png", alt: "Bridal mehndi design" },
+  { id: "ig1", src: "/images/mehndi/1.jpeg", alt: "Bridal mehndi design" },
   { id: "ig2", src: "/images/canvas-painting.png", alt: "Canvas painting" },
   { id: "ig3", src: "/images/stitching/5.jpeg", alt: "Stitching & alterations" },
   { id: "ig4", src: "/images/home-decor.png", alt: "Handmade home decor" },
   { id: "ig5", src: "/images/portrait-sketch.png", alt: "Portrait sketch" },
   { id: "ig6", src: "/images/custom-gifts.png", alt: "Custom gifts" },
   { id: "ig7", src: "/images/wall-decor.png", alt: "Wall decor" },
-  { id: "ig8", src: "/images/festival-mehndi.png", alt: "Festival mehndi" },
+  { id: "ig8", src: "/images/mehndi/5.jpeg", alt: "Festival mehndi" },
 ];
 
 export default function InstagramGallery() {

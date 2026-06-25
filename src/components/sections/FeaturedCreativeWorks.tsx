@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 const FEATURED_WORKS = [
-  { id: "fw1", title: "Royal Bridal Mehndi", category: "Mehndi", image: "/images/bridal-mehndi.png", span: "large" },
+  { id: "fw1", title: "Royal Bridal Mehndi", category: "Mehndi", image: "/images/mehndi/2.jpeg", span: "large" },
   { id: "fw2", title: "Canvas Masterpiece", category: "Painting", image: "/images/canvas-painting.png", span: "small" },
   { id: "fw3", title: "Pencil Portrait", category: "Sketch", image: "/images/portrait-sketch.png", span: "small" },
   { id: "fw4", title: "Designer Lehenga", category: "Fashion", image: "/images/stitching/4.jpeg", span: "small" },

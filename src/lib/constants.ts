@@ -132,7 +132,7 @@ export const SERVICES: Service[] = [
       "Premium organic mehndi",
       "Pre-bridal consultation",
     ],
-    image: "/images/bridal-mehndi.png",
+    image: "/images/mehndi/1.jpeg",
     icon: Crown,
     category: "mehndi-arts",
   },
@@ -147,7 +147,7 @@ export const SERVICES: Service[] = [
       "Quick application",
       "Long-lasting color",
     ],
-    image: "/images/engagement-mehndi.png",
+    image: "/images/mehndi/5.jpeg",
     icon: Heart,
     category: "mehndi-arts",
   },
@@ -162,7 +162,7 @@ export const SERVICES: Service[] = [
       "Quick & beautiful",
       "All-natural ingredients",
     ],
-    image: "/images/festival-mehndi.png",
+    image: "/images/mehndi/4.jpeg",
     icon: Sparkles,
     category: "mehndi-arts",
   },
@@ -241,7 +241,7 @@ export const SERVICES: Service[] = [
       "Mixed media art",
       "Personalized creations",
     ],
-    image: "/images/handmade-crafts.png",
+    image: "/images/crafts/1.jpeg",
     icon: Palette,
     category: "art-craft",
   },
@@ -256,7 +256,7 @@ export const SERVICES: Service[] = [
       "Modern abstract designs",
       "Custom sizes available",
     ],
-    image: "/images/handmade-crafts.png",
+    image: "/images/crafts/6.jpeg",
     icon: Palette,
     category: "art-craft",
   },
@@ -271,7 +271,7 @@ export const SERVICES: Service[] = [
       "Custom sizing",
       "Premium materials",
     ],
-    image: "/images/handmade-crafts.png",
+    image: "/images/crafts/4.jpeg",
     icon: Frame,
     category: "art-craft",
   },
@@ -584,7 +584,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "The bridal mehndi was absolutely stunning! Every guest complimented my hands. The sisters put so much love and detail into every design. Truly the best mehndi artist I've ever seen.",
     rating: 5,
-    image: "/images/bridal-mehndi.png",
+    image: "/images/mehndi/2.jpeg",
   },
   {
     id: "t2",
@@ -611,7 +611,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "Booked them for my daughter's wedding mehndi. The entire family was served with beautiful designs. Professional, punctual, and incredibly talented. A perfect choice!",
     rating: 5,
-    image: "/images/engagement-mehndi.png",
+    image: "/images/mehndi/3.jpeg",
   },
   {
     id: "t5",
@@ -620,7 +620,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "The handcrafted art pieces I ordered for my home are gorgeous. Each piece is unique and adds such warmth to my space. Their creativity knows no bounds!",
     rating: 5,
-    image: "/images/handmade-crafts.png",
+    image: "/images/crafts/5.jpeg",
   },
   {
     id: "t6",
@@ -629,7 +629,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "I've been a loyal customer for over 2 years now. From festival mehndi to custom gifts, everything they create is magical. The three sisters are truly talented artists.",
     rating: 5,
-    image: "/images/festival-mehndi.png",
+    image: "/images/mehndi/4.jpeg",
   },
   {
     id: "t7",
@@ -638,7 +638,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
       "From the initial consultation to the final design, the experience was premium. My bridal mehndi had our love story woven into the pattern. Absolutely magical!",
     rating: 5,
-    image: "/images/bridal-mehndi.png",
+    image: "/images/mehndi/1.jpeg",
   },
   {
     id: "t8",

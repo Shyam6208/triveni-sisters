@@ -20,7 +20,7 @@ const CELEBRATION_SERVICES = [
     id: "mehndi-arts",
     title: "Mehndi Design",
     description: "Exquisite henna artistry for weddings and festivals, from traditional motifs to modern patterns.",
-    image: "/images/bridal-mehndi.png",
+    image: "/images/mehndi/3.jpeg",
     icon: Crown,
     href: "/services#mehndi-arts",
   },
